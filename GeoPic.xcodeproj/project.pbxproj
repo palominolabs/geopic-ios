@@ -21,6 +21,7 @@
 		640C4E461623761E00E04266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E271623761E00E04266 /* Foundation.framework */; };
 		640C4E4E1623761E00E04266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E4C1623761E00E04266 /* InfoPlist.strings */; };
 		640C4E5D1623783600E04266 /* GPNearbyVenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4E5C1623783600E04266 /* GPNearbyVenuesViewController.m */; };
+		640C4E5F16237B8B00E04266 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E5E16237B8A00E04266 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		640C4E4D1623761E00E04266 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		640C4E5B1623783600E04266 /* GPNearbyVenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPNearbyVenuesViewController.h; path = ViewControllers/GPNearbyVenuesViewController.h; sourceTree = "<group>"; };
 		640C4E5C1623783600E04266 /* GPNearbyVenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPNearbyVenuesViewController.m; path = ViewControllers/GPNearbyVenuesViewController.m; sourceTree = "<group>"; };
+		640C4E5E16237B8A00E04266 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640C4E5F16237B8B00E04266 /* MapKit.framework in Frameworks */,
 				640C4E261623761E00E04266 /* UIKit.framework in Frameworks */,
 				640C4E281623761E00E04266 /* Foundation.framework in Frameworks */,
 				640C4E2A1623761E00E04266 /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		640C4E241623761E00E04266 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				640C4E5E16237B8A00E04266 /* MapKit.framework */,
 				640C4E251623761E00E04266 /* UIKit.framework */,
 				640C4E271623761E00E04266 /* Foundation.framework */,
 				640C4E291623761E00E04266 /* CoreGraphics.framework */,
