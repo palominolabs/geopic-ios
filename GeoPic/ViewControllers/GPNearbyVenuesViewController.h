@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GPNearbyVenuesViewController : UIViewController
+@interface GPNearbyVenuesViewController : UIViewController<MKMapViewDelegate>
 
 @end

@@ -22,6 +22,7 @@
     _mapView = [MKMapView new];
     _mapView.translatesAutoresizingMaskIntoConstraints = NO;
     _mapView.userTrackingMode = MKUserTrackingModeFollow;
+    _mapView.delegate = self;
     [self.view addSubview:_mapView];
     
     
@@ -46,5 +47,10 @@
 }
 
 
+#pragma mark MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    DLOG(@"New map region: %f, %f", mapView.centerCoordinate.latitude, mapView.centerCoordinate.longitude);
+}
 
 @end

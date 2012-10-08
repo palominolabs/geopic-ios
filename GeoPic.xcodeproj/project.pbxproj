@@ -55,6 +55,7 @@
 		640C4E5B1623783600E04266 /* GPNearbyVenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPNearbyVenuesViewController.h; path = ViewControllers/GPNearbyVenuesViewController.h; sourceTree = "<group>"; };
 		640C4E5C1623783600E04266 /* GPNearbyVenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPNearbyVenuesViewController.m; path = ViewControllers/GPNearbyVenuesViewController.m; sourceTree = "<group>"; };
 		640C4E5E16237B8A00E04266 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		640C4E601623850700E04266 /* DLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 				640C4E341623761E00E04266 /* GPAppDelegate.h */,
 				640C4E351623761E00E04266 /* GPAppDelegate.m */,
 				640C4E2C1623761E00E04266 /* Supporting Files */,
+				640C4E601623850700E04266 /* DLog.h */,
 			);
 			path = GeoPic;
 			sourceTree = "<group>";
