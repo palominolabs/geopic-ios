@@ -20,7 +20,6 @@
 		640C4E451623761E00E04266 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E251623761E00E04266 /* UIKit.framework */; };
 		640C4E461623761E00E04266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E271623761E00E04266 /* Foundation.framework */; };
 		640C4E4E1623761E00E04266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E4C1623761E00E04266 /* InfoPlist.strings */; };
-		640C4E511623761E00E04266 /* GeoPicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4E501623761E00E04266 /* GeoPicTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +50,6 @@
 		640C4E431623761E00E04266 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		640C4E4B1623761E00E04266 /* GeoPicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoPicTests-Info.plist"; sourceTree = "<group>"; };
 		640C4E4D1623761E00E04266 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		640C4E4F1623761E00E04266 /* GeoPicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoPicTests.h; sourceTree = "<group>"; };
-		640C4E501623761E00E04266 /* GeoPicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoPicTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +133,6 @@
 		640C4E491623761E00E04266 /* GeoPicTests */ = {
 			isa = PBXGroup;
 			children = (
-				640C4E4F1623761E00E04266 /* GeoPicTests.h */,
-				640C4E501623761E00E04266 /* GeoPicTests.m */,
 				640C4E4A1623761E00E04266 /* Supporting Files */,
 			);
 			path = GeoPicTests;
@@ -271,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				640C4E511623761E00E04266 /* GeoPicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
