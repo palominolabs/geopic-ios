@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		640C4E261623761E00E04266 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E251623761E00E04266 /* UIKit.framework */; };
+		640C4E281623761E00E04266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E271623761E00E04266 /* Foundation.framework */; };
+		640C4E2A1623761E00E04266 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E291623761E00E04266 /* CoreGraphics.framework */; };
+		640C4E301623761E00E04266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E2E1623761E00E04266 /* InfoPlist.strings */; };
+		640C4E321623761E00E04266 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4E311623761E00E04266 /* main.m */; };
+		640C4E361623761E00E04266 /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4E351623761E00E04266 /* GPAppDelegate.m */; };
+		640C4E381623761E00E04266 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E371623761E00E04266 /* Default.png */; };
+		640C4E3A1623761E00E04266 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E391623761E00E04266 /* Default@2x.png */; };
+		640C4E3C1623761E00E04266 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E3B1623761E00E04266 /* Default-568h@2x.png */; };
+		640C4E441623761E00E04266 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E431623761E00E04266 /* SenTestingKit.framework */; };
+		640C4E451623761E00E04266 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E251623761E00E04266 /* UIKit.framework */; };
+		640C4E461623761E00E04266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E271623761E00E04266 /* Foundation.framework */; };
+		640C4E4E1623761E00E04266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E4C1623761E00E04266 /* InfoPlist.strings */; };
+		640C4E511623761E00E04266 /* GeoPicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4E501623761E00E04266 /* GeoPicTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		640C4E471623761E00E04266 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 640C4E181623761E00E04266 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 640C4E201623761E00E04266;
+			remoteInfo = GeoPic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		640C4E211623761E00E04266 /* GeoPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		640C4E251623761E00E04266 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		640C4E271623761E00E04266 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		640C4E291623761E00E04266 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		640C4E2D1623761E00E04266 /* GeoPic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoPic-Info.plist"; sourceTree = "<group>"; };
+		640C4E2F1623761E00E04266 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		640C4E311623761E00E04266 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		640C4E331623761E00E04266 /* GeoPic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoPic-Prefix.pch"; sourceTree = "<group>"; };
+		640C4E341623761E00E04266 /* GPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegate.h; sourceTree = "<group>"; };
+		640C4E351623761E00E04266 /* GPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegate.m; sourceTree = "<group>"; };
+		640C4E371623761E00E04266 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		640C4E391623761E00E04266 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		640C4E3B1623761E00E04266 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		640C4E421623761E00E04266 /* GeoPicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoPicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		640C4E431623761E00E04266 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		640C4E4B1623761E00E04266 /* GeoPicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoPicTests-Info.plist"; sourceTree = "<group>"; };
+		640C4E4D1623761E00E04266 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		640C4E4F1623761E00E04266 /* GeoPicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoPicTests.h; sourceTree = "<group>"; };
+		640C4E501623761E00E04266 /* GeoPicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoPicTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		640C4E1E1623761E00E04266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640C4E261623761E00E04266 /* UIKit.framework in Frameworks */,
+				640C4E281623761E00E04266 /* Foundation.framework in Frameworks */,
+				640C4E2A1623761E00E04266 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640C4E3E1623761E00E04266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640C4E441623761E00E04266 /* SenTestingKit.framework in Frameworks */,
+				640C4E451623761E00E04266 /* UIKit.framework in Frameworks */,
+				640C4E461623761E00E04266 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		640C4E161623761E00E04266 = {
+			isa = PBXGroup;
+			children = (
+				640C4E2B1623761E00E04266 /* GeoPic */,
+				640C4E491623761E00E04266 /* GeoPicTests */,
+				640C4E241623761E00E04266 /* Frameworks */,
+				640C4E221623761E00E04266 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		640C4E221623761E00E04266 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				640C4E211623761E00E04266 /* GeoPic.app */,
+				640C4E421623761E00E04266 /* GeoPicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		640C4E241623761E00E04266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				640C4E251623761E00E04266 /* UIKit.framework */,
+				640C4E271623761E00E04266 /* Foundation.framework */,
+				640C4E291623761E00E04266 /* CoreGraphics.framework */,
+				640C4E431623761E00E04266 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		640C4E2B1623761E00E04266 /* GeoPic */ = {
+			isa = PBXGroup;
+			children = (
+				640C4E341623761E00E04266 /* GPAppDelegate.h */,
+				640C4E351623761E00E04266 /* GPAppDelegate.m */,
+				640C4E2C1623761E00E04266 /* Supporting Files */,
+			);
+			path = GeoPic;
+			sourceTree = "<group>";
+		};
+		640C4E2C1623761E00E04266 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				640C4E2D1623761E00E04266 /* GeoPic-Info.plist */,
+				640C4E2E1623761E00E04266 /* InfoPlist.strings */,
+				640C4E311623761E00E04266 /* main.m */,
+				640C4E331623761E00E04266 /* GeoPic-Prefix.pch */,
+				640C4E371623761E00E04266 /* Default.png */,
+				640C4E391623761E00E04266 /* Default@2x.png */,
+				640C4E3B1623761E00E04266 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		640C4E491623761E00E04266 /* GeoPicTests */ = {
+			isa = PBXGroup;
+			children = (
+				640C4E4F1623761E00E04266 /* GeoPicTests.h */,
+				640C4E501623761E00E04266 /* GeoPicTests.m */,
+				640C4E4A1623761E00E04266 /* Supporting Files */,
+			);
+			path = GeoPicTests;
+			sourceTree = "<group>";
+		};
+		640C4E4A1623761E00E04266 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				640C4E4B1623761E00E04266 /* GeoPicTests-Info.plist */,
+				640C4E4C1623761E00E04266 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		640C4E201623761E00E04266 /* GeoPic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 640C4E541623761E00E04266 /* Build configuration list for PBXNativeTarget "GeoPic" */;
+			buildPhases = (
+				640C4E1D1623761E00E04266 /* Sources */,
+				640C4E1E1623761E00E04266 /* Frameworks */,
+				640C4E1F1623761E00E04266 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoPic;
+			productName = GeoPic;
+			productReference = 640C4E211623761E00E04266 /* GeoPic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		640C4E411623761E00E04266 /* GeoPicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 640C4E571623761E00E04266 /* Build configuration list for PBXNativeTarget "GeoPicTests" */;
+			buildPhases = (
+				640C4E3D1623761E00E04266 /* Sources */,
+				640C4E3E1623761E00E04266 /* Frameworks */,
+				640C4E3F1623761E00E04266 /* Resources */,
+				640C4E401623761E00E04266 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				640C4E481623761E00E04266 /* PBXTargetDependency */,
+			);
+			name = GeoPicTests;
+			productName = GeoPicTests;
+			productReference = 640C4E421623761E00E04266 /* GeoPicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		640C4E181623761E00E04266 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GP;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Palomino Labs, Inc.";
+			};
+			buildConfigurationList = 640C4E1B1623761E00E04266 /* Build configuration list for PBXProject "GeoPic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 640C4E161623761E00E04266;
+			productRefGroup = 640C4E221623761E00E04266 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				640C4E201623761E00E04266 /* GeoPic */,
+				640C4E411623761E00E04266 /* GeoPicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		640C4E1F1623761E00E04266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640C4E301623761E00E04266 /* InfoPlist.strings in Resources */,
+				640C4E381623761E00E04266 /* Default.png in Resources */,
+				640C4E3A1623761E00E04266 /* Default@2x.png in Resources */,
+				640C4E3C1623761E00E04266 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640C4E3F1623761E00E04266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640C4E4E1623761E00E04266 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		640C4E401623761E00E04266 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		640C4E1D1623761E00E04266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640C4E321623761E00E04266 /* main.m in Sources */,
+				640C4E361623761E00E04266 /* GPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640C4E3D1623761E00E04266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640C4E511623761E00E04266 /* GeoPicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		640C4E481623761E00E04266 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 640C4E201623761E00E04266 /* GeoPic */;
+			targetProxy = 640C4E471623761E00E04266 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		640C4E2E1623761E00E04266 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				640C4E2F1623761E00E04266 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		640C4E4C1623761E00E04266 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				640C4E4D1623761E00E04266 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		640C4E521623761E00E04266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		640C4E531623761E00E04266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		640C4E551623761E00E04266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoPic/GeoPic-Prefix.pch";
+				INFOPLIST_FILE = "GeoPic/GeoPic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		640C4E561623761E00E04266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoPic/GeoPic-Prefix.pch";
+				INFOPLIST_FILE = "GeoPic/GeoPic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		640C4E581623761E00E04266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoPic.app/GeoPic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoPic/GeoPic-Prefix.pch";
+				INFOPLIST_FILE = "GeoPicTests/GeoPicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		640C4E591623761E00E04266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoPic.app/GeoPic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoPic/GeoPic-Prefix.pch";
+				INFOPLIST_FILE = "GeoPicTests/GeoPicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		640C4E1B1623761E00E04266 /* Build configuration list for PBXProject "GeoPic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				640C4E521623761E00E04266 /* Debug */,
+				640C4E531623761E00E04266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		640C4E541623761E00E04266 /* Build configuration list for PBXNativeTarget "GeoPic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				640C4E551623761E00E04266 /* Debug */,
+				640C4E561623761E00E04266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		640C4E571623761E00E04266 /* Build configuration list for PBXNativeTarget "GeoPicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				640C4E581623761E00E04266 /* Debug */,
+				640C4E591623761E00E04266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 640C4E181623761E00E04266 /* Project object */;
+}
