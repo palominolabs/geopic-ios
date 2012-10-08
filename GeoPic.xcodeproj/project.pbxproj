@@ -20,6 +20,7 @@
 		640C4E451623761E00E04266 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E251623761E00E04266 /* UIKit.framework */; };
 		640C4E461623761E00E04266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4E271623761E00E04266 /* Foundation.framework */; };
 		640C4E4E1623761E00E04266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 640C4E4C1623761E00E04266 /* InfoPlist.strings */; };
+		640C4E5D1623783600E04266 /* GPNearbyVenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4E5C1623783600E04266 /* GPNearbyVenuesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		640C4E431623761E00E04266 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		640C4E4B1623761E00E04266 /* GeoPicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoPicTests-Info.plist"; sourceTree = "<group>"; };
 		640C4E4D1623761E00E04266 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		640C4E5B1623783600E04266 /* GPNearbyVenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPNearbyVenuesViewController.h; path = ViewControllers/GPNearbyVenuesViewController.h; sourceTree = "<group>"; };
+		640C4E5C1623783600E04266 /* GPNearbyVenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPNearbyVenuesViewController.m; path = ViewControllers/GPNearbyVenuesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 		640C4E2B1623761E00E04266 /* GeoPic */ = {
 			isa = PBXGroup;
 			children = (
+				640C4E5A162377E500E04266 /* ViewControllers */,
 				640C4E341623761E00E04266 /* GPAppDelegate.h */,
 				640C4E351623761E00E04266 /* GPAppDelegate.m */,
 				640C4E2C1623761E00E04266 /* Supporting Files */,
@@ -145,6 +149,15 @@
 				640C4E4C1623761E00E04266 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		640C4E5A162377E500E04266 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				640C4E5B1623783600E04266 /* GPNearbyVenuesViewController.h */,
+				640C4E5C1623783600E04266 /* GPNearbyVenuesViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +272,7 @@
 			files = (
 				640C4E321623761E00E04266 /* main.m in Sources */,
 				640C4E361623761E00E04266 /* GPAppDelegate.m in Sources */,
+				640C4E5D1623783600E04266 /* GPNearbyVenuesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
