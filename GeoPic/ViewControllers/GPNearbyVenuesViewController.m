@@ -20,7 +20,22 @@
     [super loadView];
     
     _mapView = [MKMapView new];
+    _mapView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_mapView];
+    
+    
+    
+    [self.view addConstraints:[NSLayoutConstraint
+                               constraintsWithVisualFormat:@"V:|[_mapView]|"
+                               options:0
+                               metrics:nil views:NSDictionaryOfVariableBindings(_mapView)]];
+    
+    [self.view addConstraints:[NSLayoutConstraint
+                               constraintsWithVisualFormat:@"H:|[_mapView]|"
+                               options:0
+                               metrics:nil views:NSDictionaryOfVariableBindings(_mapView)]];
+    
+
 }
 
 - (void) dealloc {
