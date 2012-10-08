@@ -21,6 +21,7 @@
     
     _mapView = [MKMapView new];
     _mapView.translatesAutoresizingMaskIntoConstraints = NO;
+    _mapView.userTrackingMode = MKUserTrackingModeFollow;
     [self.view addSubview:_mapView];
     
     
