@@ -9,6 +9,14 @@
 #import "GPVenuesFetcher.h"
 #import "GPVenue.h"
 
+#ifndef FOURSQUARE_CLIENT_ID
+#error FOURSQUARE_CLIENT_ID not defined
+#endif
+
+#ifndef FOURSQUARE_SECRET_ID
+#error FOURSQUARE_SECRET_ID not defined
+#endif
+
 @implementation GPVenuesFetcher {
     NSString *_foursquareClientId;
     NSString *_foursquareSecretId;
@@ -20,9 +28,8 @@
     if(self = [super init]) {
         _delegate = delegate;
         
-        _foursquareClientId = @"G1VAOKQBO0ALOV0WJ0F0CVRLQUABQN51VSCH5SDMHQ2KCHG5";
-        _foursquareSecretId = @"B3IJ4NOQXQY1R2CMLN4Q5DY1TG210YS433TXD4EAWN5O5BKT";
-        
+        _foursquareClientId = FOURSQUARE_CLIENT_ID;
+        _foursquareSecretId = FOURSQUARE_SECRET_ID;
     }
     return self;
 }

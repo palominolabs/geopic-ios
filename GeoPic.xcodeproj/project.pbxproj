@@ -150,6 +150,8 @@
 		640C4EE51623898B00E04266 /* GPVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenue.m; sourceTree = "<group>"; };
 		640C4EE716238A2600E04266 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		640C4EE916238A7400E04266 /* GPVenueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenueTests.m; sourceTree = "<group>"; };
+		649CE9D31624F2FB0027FBC7 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Dev.xcconfig; path = GeoPic/Dev.xcconfig; sourceTree = "<group>"; };
+		649CE9D41624F3160027FBC7 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Prod.xcconfig; path = GeoPic/Prod.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,8 @@
 		640C4E161623761E00E04266 = {
 			isa = PBXGroup;
 			children = (
+				649CE9D41624F3160027FBC7 /* Prod.xcconfig */,
+				649CE9D31624F2FB0027FBC7 /* Dev.xcconfig */,
 				640C4EE716238A2600E04266 /* CoreLocation.framework */,
 				640C4E2B1623761E00E04266 /* GeoPic */,
 				640C4E491623761E00E04266 /* GeoPicTests */,
@@ -624,8 +628,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		640C4E521623761E00E04266 /* Debug */ = {
+		640C4E521623761E00E04266 /* Dev */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649CE9D31624F2FB0027FBC7 /* Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -650,10 +655,11 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Dev;
 		};
-		640C4E531623761E00E04266 /* Release */ = {
+		640C4E531623761E00E04266 /* Prod */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649CE9D41624F3160027FBC7 /* Prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -672,9 +678,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Prod;
 		};
-		640C4E551623761E00E04266 /* Debug */ = {
+		640C4E551623761E00E04266 /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -683,9 +689,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Debug;
+			name = Dev;
 		};
-		640C4E561623761E00E04266 /* Release */ = {
+		640C4E561623761E00E04266 /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -694,9 +700,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = Prod;
 		};
-		640C4E581623761E00E04266 /* Debug */ = {
+		640C4E581623761E00E04266 /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoPic.app/GeoPic";
@@ -711,9 +717,9 @@
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
-			name = Debug;
+			name = Dev;
 		};
-		640C4E591623761E00E04266 /* Release */ = {
+		640C4E591623761E00E04266 /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoPic.app/GeoPic";
@@ -728,7 +734,7 @@
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
-			name = Release;
+			name = Prod;
 		};
 /* End XCBuildConfiguration section */
 
@@ -736,29 +742,29 @@
 		640C4E1B1623761E00E04266 /* Build configuration list for PBXProject "GeoPic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				640C4E521623761E00E04266 /* Debug */,
-				640C4E531623761E00E04266 /* Release */,
+				640C4E521623761E00E04266 /* Dev */,
+				640C4E531623761E00E04266 /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Prod;
 		};
 		640C4E541623761E00E04266 /* Build configuration list for PBXNativeTarget "GeoPic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				640C4E551623761E00E04266 /* Debug */,
-				640C4E561623761E00E04266 /* Release */,
+				640C4E551623761E00E04266 /* Dev */,
+				640C4E561623761E00E04266 /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Prod;
 		};
 		640C4E571623761E00E04266 /* Build configuration list for PBXNativeTarget "GeoPicTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				640C4E581623761E00E04266 /* Debug */,
-				640C4E591623761E00E04266 /* Release */,
+				640C4E581623761E00E04266 /* Dev */,
+				640C4E591623761E00E04266 /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Prod;
 		};
 /* End XCConfigurationList section */
 	};
