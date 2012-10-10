@@ -38,6 +38,7 @@
 		640C4EE61623898B00E04266 /* GPVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4EE51623898B00E04266 /* GPVenue.m */; };
 		640C4EE816238A2600E04266 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4EE716238A2600E04266 /* CoreLocation.framework */; };
 		640C4EEA16238A7400E04266 /* GPVenueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4EE916238A7400E04266 /* GPVenueTests.m */; };
+		6426FD9E1625F3F100C4D759 /* GPVenueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6426FD9D1625F3F100C4D759 /* GPVenueDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		640C4EE51623898B00E04266 /* GPVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenue.m; sourceTree = "<group>"; };
 		640C4EE716238A2600E04266 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		640C4EE916238A7400E04266 /* GPVenueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenueTests.m; sourceTree = "<group>"; };
+		6426FD9C1625F3F100C4D759 /* GPVenueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPVenueDetailsViewController.h; path = ViewControllers/GPVenueDetailsViewController.h; sourceTree = "<group>"; };
+		6426FD9D1625F3F100C4D759 /* GPVenueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPVenueDetailsViewController.m; path = ViewControllers/GPVenueDetailsViewController.m; sourceTree = "<group>"; };
 		649CE9D31624F2FB0027FBC7 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Dev.xcconfig; path = GeoPic/Dev.xcconfig; sourceTree = "<group>"; };
 		649CE9D41624F3160027FBC7 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Prod.xcconfig; path = GeoPic/Prod.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +272,8 @@
 			children = (
 				640C4E5B1623783600E04266 /* GPNearbyVenuesViewController.h */,
 				640C4E5C1623783600E04266 /* GPNearbyVenuesViewController.m */,
+				6426FD9C1625F3F100C4D759 /* GPVenueDetailsViewController.h */,
+				6426FD9D1625F3F100C4D759 /* GPVenueDetailsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 				640C4EB3162386A400E04266 /* UIImageView+AFNetworking.m in Sources */,
 				640C4EDC1623891A00E04266 /* GPVenuesFetcher.m in Sources */,
 				640C4EE61623898B00E04266 /* GPVenue.m in Sources */,
+				6426FD9E1625F3F100C4D759 /* GPVenueDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

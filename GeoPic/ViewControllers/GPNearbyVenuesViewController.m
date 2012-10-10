@@ -9,6 +9,7 @@
 #import "GPNearbyVenuesViewController.h"
 #import "GPVenuesFetcher.h"
 #import "GPVenue.h"
+#import "GPVenueDetailsViewController.h"
 
 @interface GPNearbyVenuesViewController ()
 
@@ -21,6 +22,8 @@
 
 - (void)loadView {
     [super loadView];
+    
+    self.navigationItem.title = NSLocalizedString(@"Nearby Places", @"Nearby Places");
     
     _venueFetcher = [[GPVenuesFetcher alloc] initWithDelegate:self];
     
@@ -79,7 +82,9 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     GPVenue *venue = view.annotation;
-    DLOG(@"Tapped Venue: %@", venue.title);
+
+    
+    [self.navigationController pushViewController:[[[GPVenueDetailsViewController alloc] initWithVenue:venue] autorelease] animated:YES];
 }
 
 

@@ -21,7 +21,11 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    self.window.rootViewController = [[GPNearbyVenuesViewController new] autorelease];
+    
+    GPNearbyVenuesViewController *nearbyVenuesController = [[GPNearbyVenuesViewController new] autorelease];
+    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:nearbyVenuesController] autorelease];
+    
+    self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible];
     return YES;
