@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GPVenue.h"
 
-@interface GPVenueDetailsViewController : UITableViewController
+@interface GPVenueDetailsViewController : UITableViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 - (id)initWithVenue:(GPVenue *)venue;
 
