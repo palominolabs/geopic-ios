@@ -19,6 +19,7 @@
 #import "AFNetworking.h"
 #import "StackMob.h"
 #import "MBProgressHUD.h"
+#import "KISSMetricsAPI.h"
 #endif
 
 #import "DLog.h"

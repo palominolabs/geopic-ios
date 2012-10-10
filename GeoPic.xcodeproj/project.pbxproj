@@ -35,6 +35,7 @@
 		641B3DEA162626C7008F76F8 /* libstackmob-v1.0.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B3DE8162626C7008F76F8 /* libstackmob-v1.0.1.a */; };
 		641B3DF016262774008F76F8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B3DEF16262774008F76F8 /* CoreData.framework */; };
 		641B3DF4162634FB008F76F8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 641B3DF3162634FB008F76F8 /* MBProgressHUD.m */; };
+		641B3DF8162638ED008F76F8 /* KISSMetricsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 641B3DF7162638ED008F76F8 /* KISSMetricsAPI.m */; };
 		6426FD9E1625F3F100C4D759 /* GPVenueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6426FD9D1625F3F100C4D759 /* GPVenueDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		641B3DEF16262774008F76F8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		641B3DF2162634FB008F76F8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		641B3DF3162634FB008F76F8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		641B3DF6162638ED008F76F8 /* KISSMetricsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KISSMetricsAPI.h; sourceTree = "<group>"; };
+		641B3DF7162638ED008F76F8 /* KISSMetricsAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KISSMetricsAPI.m; sourceTree = "<group>"; };
 		6426FD9C1625F3F100C4D759 /* GPVenueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPVenueDetailsViewController.h; path = ViewControllers/GPVenueDetailsViewController.h; sourceTree = "<group>"; };
 		6426FD9D1625F3F100C4D759 /* GPVenueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPVenueDetailsViewController.m; path = ViewControllers/GPVenueDetailsViewController.m; sourceTree = "<group>"; };
 		649CE9D31624F2FB0027FBC7 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Dev.xcconfig; path = GeoPic/Dev.xcconfig; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 		640C4E2B1623761E00E04266 /* GeoPic */ = {
 			isa = PBXGroup;
 			children = (
+				641B3DF5162638EC008F76F8 /* KISSmetrics */,
 				641B3DF1162634FB008F76F8 /* MBProgressHUD */,
 				641B3DC2162626C7008F76F8 /* StackMob-v1.0.1 */,
 				640C4ED8162388F500E04266 /* Foursquare */,
@@ -344,6 +348,15 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		641B3DF5162638EC008F76F8 /* KISSmetrics */ = {
+			isa = PBXGroup;
+			children = (
+				641B3DF6162638ED008F76F8 /* KISSMetricsAPI.h */,
+				641B3DF7162638ED008F76F8 /* KISSMetricsAPI.m */,
+			);
+			path = KISSmetrics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -463,6 +476,7 @@
 				6426FD9E1625F3F100C4D759 /* GPVenueDetailsViewController.m in Sources */,
 				641B3DBF162625BF008F76F8 /* GPAuthHelpers.m in Sources */,
 				641B3DF4162634FB008F76F8 /* MBProgressHUD.m in Sources */,
+				641B3DF8162638ED008F76F8 /* KISSMetricsAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

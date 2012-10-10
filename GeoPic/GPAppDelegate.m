@@ -25,6 +25,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [KISSMetricsAPI sharedAPIWithKey:KISSMETRICS_API_KEY];
+    
     [[[SMClient alloc] initWithAPIVersion:@"0" publicKey:STACKMOB_PUBLIC_KEY] autorelease];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
@@ -36,6 +38,11 @@
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [[KISSMetricsAPI sharedAPI] recordEvent:@"launch" withProperties:nil];
 }
 
 @end
