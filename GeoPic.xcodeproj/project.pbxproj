@@ -33,6 +33,11 @@
 		640C4EB3162386A400E04266 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4E76162386A400E04266 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc "; }; };
 		640C4ED61623875000E04266 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4ED41623873C00E04266 /* MobileCoreServices.framework */; };
 		640C4ED71623875000E04266 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4ED21623873800E04266 /* SystemConfiguration.framework */; };
+		640C4EDC1623891A00E04266 /* GPVenuesFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4EDA1623891A00E04266 /* GPVenuesFetcher.m */; };
+		640C4EE21623897900E04266 /* GPVenuesFetcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4EDF1623897900E04266 /* GPVenuesFetcherTests.m */; };
+		640C4EE61623898B00E04266 /* GPVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4EE51623898B00E04266 /* GPVenue.m */; };
+		640C4EE816238A2600E04266 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640C4EE716238A2600E04266 /* CoreLocation.framework */; };
+		640C4EEA16238A7400E04266 /* GPVenueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C4EE916238A7400E04266 /* GPVenueTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +140,16 @@
 		640C4EA2162386A400E04266 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		640C4ED21623873800E04266 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		640C4ED41623873C00E04266 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		640C4ED91623891A00E04266 /* GPVenuesFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVenuesFetcher.h; sourceTree = "<group>"; };
+		640C4EDA1623891A00E04266 /* GPVenuesFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenuesFetcher.m; sourceTree = "<group>"; };
+		640C4EDB1623891A00E04266 /* GPVenuesFetcherDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVenuesFetcherDelegate.h; sourceTree = "<group>"; };
+		640C4EDE1623897900E04266 /* GPVenuesFetcherTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVenuesFetcherTests.h; sourceTree = "<group>"; };
+		640C4EDF1623897900E04266 /* GPVenuesFetcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenuesFetcherTests.m; sourceTree = "<group>"; };
+		640C4EE01623897900E04266 /* GPVenueTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVenueTests.h; sourceTree = "<group>"; };
+		640C4EE41623898B00E04266 /* GPVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVenue.h; sourceTree = "<group>"; };
+		640C4EE51623898B00E04266 /* GPVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenue.m; sourceTree = "<group>"; };
+		640C4EE716238A2600E04266 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		640C4EE916238A7400E04266 /* GPVenueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVenueTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640C4EE816238A2600E04266 /* CoreLocation.framework in Frameworks */,
 				640C4E5F16237B8B00E04266 /* MapKit.framework in Frameworks */,
 				640C4E261623761E00E04266 /* UIKit.framework in Frameworks */,
 				640C4E281623761E00E04266 /* Foundation.framework in Frameworks */,
@@ -167,6 +183,7 @@
 		640C4E161623761E00E04266 = {
 			isa = PBXGroup;
 			children = (
+				640C4EE716238A2600E04266 /* CoreLocation.framework */,
 				640C4E2B1623761E00E04266 /* GeoPic */,
 				640C4E491623761E00E04266 /* GeoPicTests */,
 				640C4E241623761E00E04266 /* Frameworks */,
@@ -200,6 +217,7 @@
 		640C4E2B1623761E00E04266 /* GeoPic */ = {
 			isa = PBXGroup;
 			children = (
+				640C4ED8162388F500E04266 /* Foursquare */,
 				640C4E62162386A400E04266 /* AFNetworking */,
 				640C4E5A162377E500E04266 /* ViewControllers */,
 				640C4E341623761E00E04266 /* GPAppDelegate.h */,
@@ -227,6 +245,7 @@
 		640C4E491623761E00E04266 /* GeoPicTests */ = {
 			isa = PBXGroup;
 			children = (
+				640C4EDD1623896200E04266 /* Foursquare */,
 				640C4E4A1623761E00E04266 /* Supporting Files */,
 			);
 			path = GeoPicTests;
@@ -381,6 +400,29 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		640C4ED8162388F500E04266 /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				640C4EE41623898B00E04266 /* GPVenue.h */,
+				640C4EE51623898B00E04266 /* GPVenue.m */,
+				640C4ED91623891A00E04266 /* GPVenuesFetcher.h */,
+				640C4EDA1623891A00E04266 /* GPVenuesFetcher.m */,
+				640C4EDB1623891A00E04266 /* GPVenuesFetcherDelegate.h */,
+			);
+			name = Foursquare;
+			sourceTree = "<group>";
+		};
+		640C4EDD1623896200E04266 /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				640C4EDE1623897900E04266 /* GPVenuesFetcherTests.h */,
+				640C4EDF1623897900E04266 /* GPVenuesFetcherTests.m */,
+				640C4EE01623897900E04266 /* GPVenueTests.h */,
+				640C4EE916238A7400E04266 /* GPVenueTests.m */,
+			);
+			name = Foursquare;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -530,6 +572,8 @@
 				640C4EB1162386A400E04266 /* AFURLConnectionOperation.m in Sources */,
 				640C4EB2162386A400E04266 /* AFXMLRequestOperation.m in Sources */,
 				640C4EB3162386A400E04266 /* UIImageView+AFNetworking.m in Sources */,
+				640C4EDC1623891A00E04266 /* GPVenuesFetcher.m in Sources */,
+				640C4EE61623898B00E04266 /* GPVenue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +581,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640C4EE21623897900E04266 /* GPVenuesFetcherTests.m in Sources */,
+				640C4EEA16238A7400E04266 /* GPVenueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +749,7 @@
 				640C4E561623761E00E04266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		640C4E571623761E00E04266 /* Build configuration list for PBXNativeTarget "GeoPicTests" */ = {
 			isa = XCConfigurationList;
@@ -711,6 +758,7 @@
 				640C4E591623761E00E04266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

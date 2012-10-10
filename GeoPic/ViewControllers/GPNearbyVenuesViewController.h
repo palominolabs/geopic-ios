@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPVenuesFetcherDelegate.h"
 
-@interface GPNearbyVenuesViewController : UIViewController<MKMapViewDelegate>
+@interface GPNearbyVenuesViewController : UIViewController<MKMapViewDelegate, GPVenuesFetcherDelegate>
 
 @end
