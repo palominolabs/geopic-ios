@@ -58,6 +58,14 @@
         image = UIGraphicsGetImageFromCurrentImageContext();
     }
     
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view.window];
+    [self.view.window addSubview:hud];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText =  NSLocalizedString(@"Saving Picture", @"Saving Picture");
+    hud.removeFromSuperViewOnHide = YES;
+    hud.dimBackground = YES;
+    [hud show:YES];
+    
     NSData *pictureData = UIImageJPEGRepresentation(image, 0.5);
     GPWithLoggedInUser(^(NSString *userId) {
         NSString *picture = [SMBinaryDataConversion stringForBinaryData:pictureData name:@"picture" contentType:@"image/jpeg"];
@@ -67,11 +75,15 @@
         @"venue_name":_venue.title
         };
         
-        [[[SMClient defaultClient] dataStore] createObject:object inSchema:@"venuepicture" onSuccess:nil onFailure:nil];
+        [[[SMClient defaultClient] dataStore] createObject:object inSchema:@"venuepicture" onSuccess:^(NSDictionary *theObject, NSString *schema) {
+            [hud hide:YES];
+        } onFailure:^(NSError *theError, NSDictionary *theObject, NSString *schema) {
+            [hud hide:YES];
+        }];
     });
 }
 
-		
+
 #pragma mark UITableViewDataSource
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
