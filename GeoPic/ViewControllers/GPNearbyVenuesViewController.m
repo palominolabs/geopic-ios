@@ -56,6 +56,33 @@
     [_venueFetcher findVenuesNear:mapView.centerCoordinate];
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    if (![annotation isKindOfClass:[GPVenue class]]) {
+        return nil;
+    }
+    
+    static NSString *kMapViewIdentifier = @"mapViewAnnotation";
+    
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:kMapViewIdentifier];
+    
+    if (!annotationView) {
+        annotationView = [[[MKPinAnnotationView alloc] initWithAnnotation:nil reuseIdentifier:kMapViewIdentifier] autorelease];
+        annotationView.canShowCallout = YES;
+        
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    }
+    
+    annotationView.annotation = annotation;
+    
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    GPVenue *venue = view.annotation;
+    DLOG(@"Tapped Venue: %@", venue.title);
+}
+
+
 #pragma mark GPVenuesFetcherDelegate
 
 - (void)venusFetcher:(GPVenuesFetcher *)venuesFetcher didFetchVenues:(NSArray *)venues {
