@@ -58,9 +58,16 @@
         image = UIGraphicsGetImageFromCurrentImageContext();
     }
     
-    NSData *photoData = UIImageJPEGRepresentation(image, 0.5);
+    NSData *pictureData = UIImageJPEGRepresentation(image, 0.5);
     GPWithLoggedInUser(^(NSString *userId) {
-        DLOG(@"Took JPEG picture with %d bytes for user %@", photoData.length, userId);
+        NSString *picture = [SMBinaryDataConversion stringForBinaryData:pictureData name:@"picture" contentType:@"image/jpeg"];
+        NSDictionary *object = @{
+        @"picture":picture,
+        @"foursquare_id":_venue.foursquareId,
+        @"venue_name":_venue.title
+        };
+        
+        [[[SMClient defaultClient] dataStore] createObject:object inSchema:@"venuepicture" onSuccess:nil onFailure:nil];
     });
 }
 
