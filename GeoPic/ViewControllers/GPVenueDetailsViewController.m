@@ -7,6 +7,7 @@
 //
 
 #import "GPVenueDetailsViewController.h"
+#import "GPAuthHelpers.h"
 
 
 @interface GPVenueDetailsViewController ()
@@ -58,7 +59,9 @@
     }
     
     NSData *photoData = UIImageJPEGRepresentation(image, 0.5);
-    DLOG(@"Took JPEG picture with %d bytes", photoData.length);
+    GPWithLoggedInUser(^(NSString *userId) {
+        DLOG(@"Took JPEG picture with %d bytes for user %@", photoData.length, userId);
+    });
 }
 
 		
