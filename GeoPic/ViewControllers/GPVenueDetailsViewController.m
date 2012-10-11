@@ -25,8 +25,8 @@
         _venue = venue;
         
         self.navigationItem.title = _venue.title;
-
-        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture)] autorelease];
+        
+        
     }
     return self;
 }
@@ -37,7 +37,17 @@
     [[KISSMetricsAPI sharedAPI] recordEvent:@"view_venue" withProperties:@{@"foursquare_id": _venue.foursquareId}];
 }
 
-- (void)takePicture {
+- (void)loadView {
+    [super loadView];
+    
+    self.tableView.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gray-place-background"]] autorelease];
+    
+    [self.view layoutSubviews];
+    
+    self.contentSizeForViewInPopover = [self.tableView sizeThatFits:CGSizeMake(320, 300)];
+}
+
+- (void)takePicture:(UIButton *)button {
     [[KISSMetricsAPI sharedAPI] recordEvent:@"start_taking_picture" withProperties:@{@"foursquare_id": _venue.foursquareId}];
     
     UIImagePickerController *imagePicker = [[UIImagePickerController new] autorelease];
@@ -47,7 +57,21 @@
     imagePicker.allowsEditing = NO;
     imagePicker.delegate = self;
     
-    [self presentViewController:imagePicker animated:YES completion:nil];
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        popoverController.delegate = self;
+        
+        [popoverController presentPopoverFromRect:button.bounds inView:button permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    } else {
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+}
+
+#pragma mark UIPopoverControllerDelegate
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    [popoverController release];
 }
 
 #pragma mark UIImagePickerControllerDelegate
@@ -119,7 +143,10 @@
             break;
         case 1:
             cell.textLabel.text = NSLocalizedString(@"Checkins", @"Checkins");
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", _venue.checkinsCount];
+            NSNumberFormatter *formatter = [[NSNumberFormatter new] autorelease];
+            formatter.numberStyle = NSNumberFormatterDecimalStyle;
+            
+            cell.detailTextLabel.text = [NSNumberFormatter localizedStringFromNumber:[NSNumber numberWithInt:_venue.checkinsCount] numberStyle:NSNumberFormatterDecimalStyle];
             break;
         case 2:
             cell.textLabel.text = NSLocalizedString(@"Phone", @"Phone");
@@ -130,5 +157,33 @@
     return cell;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footer = [[UIView new] autorelease];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.translatesAutoresizingMaskIntoConstraints = NO;
+    [button setImage:[UIImage imageNamed:@"camera-icon"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(takePicture:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImage *buttonBackground = [UIImage imageNamed:@"green-nav-button"];
+    UIImage *resizableButtonBackground = [buttonBackground resizableImageWithCapInsets:UIEdgeInsetsMake(15, 21, 15, 21)];
+    [button setBackgroundImage:resizableButtonBackground forState:UIControlStateNormal];
+    
+    [footer addSubview:button];
+    
+    [footer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(60)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)]];
+    
+    [footer addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:footer attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    
+    [footer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[button(60)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)]];
+    
+    [footer addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:footer attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    
+    return footer;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 70;
+}
 
 @end

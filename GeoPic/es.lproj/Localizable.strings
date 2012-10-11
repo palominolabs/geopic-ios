@@ -1,0 +1,11 @@
+/* GPNearbyVenuesViewController */
+"Nearby Places" = "Lugares Cercanos";
+
+
+/* GPVenueDetailsViewController */
+"Name" = "Nombre";
+"Category" = "Categoría";
+"Checkins" = "Visitas";
+"Phone" = "Teléfono";
+
+"Saving Picture" = "Guardando Foto";

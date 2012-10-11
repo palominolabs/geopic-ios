@@ -87,8 +87,22 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     GPVenue *venue = view.annotation;
 
-    
-    [self.navigationController pushViewController:[[[GPVenueDetailsViewController alloc] initWithVenue:venue] autorelease] animated:YES];
+    GPVenueDetailsViewController *viewController = [[[GPVenueDetailsViewController alloc] initWithVenue:venue] autorelease];
+
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
+        popoverController.delegate = self;
+        
+        [popoverController presentPopoverFromRect:control.bounds inView:control permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    } else {
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+}
+
+#pragma mark UIPopoverControllerDelegate
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    [popoverController release];
 }
 
 

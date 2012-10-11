@@ -25,6 +25,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"green-nav-bar"] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                UITextAttributeTextColor:[UIColor whiteColor],
+                          UITextAttributeTextShadowColor:[[UIColor blackColor] colorWithAlphaComponent:0.8],
+                         UITextAttributeTextShadowOffset:[NSValue valueWithUIOffset:UIOffsetMake(0, -1)],
+     }];
+    
+    
+    UIImage *barButtonBackground = [UIImage imageNamed:@"green-nav-button"];
+    UIImage *resizableBarButtonBackgroundImage = [barButtonBackground resizableImageWithCapInsets:UIEdgeInsetsMake(15, 21, 15, 21)];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setBackgroundImage:resizableBarButtonBackgroundImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    UIImage *backButton = [UIImage imageNamed:@"green-back-button"];
+    UIImage *resizableBackButton = [backButton resizableImageWithCapInsets:UIEdgeInsetsMake(7, 15, 14, 15)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:resizableBackButton forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    
     [KISSMetricsAPI sharedAPIWithKey:KISSMETRICS_API_KEY];
     
     [[[SMClient alloc] initWithAPIVersion:@"0" publicKey:STACKMOB_PUBLIC_KEY] autorelease];
