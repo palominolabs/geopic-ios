@@ -43,7 +43,11 @@
                                options:0
                                metrics:nil views:NSDictionaryOfVariableBindings(_mapView)]];
     
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[KISSMetricsAPI sharedAPI] recordEvent:@"view_nearby_venues" withProperties:nil];
 }
 
 - (void) dealloc {

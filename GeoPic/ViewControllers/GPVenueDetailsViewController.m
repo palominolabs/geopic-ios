@@ -25,13 +25,21 @@
         _venue = venue;
         
         self.navigationItem.title = _venue.title;
-        
+
         self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture)] autorelease];
     }
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[KISSMetricsAPI sharedAPI] recordEvent:@"view_venue" withProperties:@{@"foursquare_id": _venue.foursquareId}];
+}
+
 - (void)takePicture {
+    [[KISSMetricsAPI sharedAPI] recordEvent:@"start_taking_picture" withProperties:@{@"foursquare_id": _venue.foursquareId}];
+    
     UIImagePickerController *imagePicker = [[UIImagePickerController new] autorelease];
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -45,6 +53,8 @@
 #pragma mark UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [[KISSMetricsAPI sharedAPI] recordEvent:@"took_picture" withProperties:@{@"foursquare_id": _venue.foursquareId}];
+    
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     UIImage *image = info[UIImagePickerControllerOriginalImage];
